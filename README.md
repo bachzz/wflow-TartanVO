@@ -2,7 +2,7 @@
 
 This paper addresses the challenge of improving learning-based monocular visual odometry (VO) in underwater environments by integrating principles of underwater optical imaging to manipulate optical flow estimation. Leveraging the inherent properties of underwater imaging, the novel wflow-TartanVO is introduced, enhancing the accuracy of VO systems for autonomous underwater vehicles (AUVs). The proposed method utilizes a normalized medium transmission map as a weight map to adjust the estimated optical flow for emphasizing regions with lower degradation and suppressing uncertain regions affected by underwater light scattering and absorption. wflow-TartanVO does not require fine-tuning of pre-trained VO models, thus promoting its adaptability to different environments and camera models. Evaluation of different real-world underwater datasets demonstrates the outperformance of wflow-TartanVO over baseline VO methods, as evidenced by the considerably reduced Absolute Trajectory Error (ATE).
 
-Please check out our [Paper](?). 
+Please check out our [Paper](https://arxiv.org/abs/2407.13159). 
 
 
 ## Setting up the environment 
@@ -41,7 +41,7 @@ Download data and put in folder: `data/SubPipe/chunk3`
 ```
 $ python vo_trajectory_from_folder.py --model-name tartanvo_1914.pkl --aqualoc --batch-size 1 --worker-num 1 --test-dir data/Aqualoc/seq9/images_sequence_9_3000 --pose-file data/Aqualoc/seq9/poses_colmap_inverse_3000.txt 
 ```
-   - wflow-TartanVO:
+      - wflow-TartanVO:
 ```
 $ python test_uie.py --model-name tartanvo_1914.pkl --uie-model-name model_best_val_2062.pth.tar --aqualoc --batch-size 1 --worker-num 1 --test-dir data/Aqualoc/seq9/images_sequence_9_3000 --pose-file data/Aqualoc/seq9/poses_colmap_inverse_3000.txt
 ```
@@ -51,7 +51,7 @@ $ python test_uie.py --model-name tartanvo_1914.pkl --uie-model-name model_best_
 ```
 $ python vo_trajectory_from_folder.py --model-name tartanvo_1914.pkl --subpipe --batch-size 1 --worker-num 1 --test-dir data/SubPipe/chunk3/Cam0_images --pose-file data/SubPipe/chunk3/poses.txt
 ```
-   - wflow-TartanVO:
+      - wflow-TartanVO:
 ```
 $ python test_uie_rgb.py --model-name tartanvo_1914.pkl --uie-model-name model_best_val_2062.pth.tar --subpipe --batch-size 1 --worker-num 1 --test-dir data/SubPipe/chunk3/Cam0_images --pose-file data/SubPipe/chunk3/poses.txt
 ```

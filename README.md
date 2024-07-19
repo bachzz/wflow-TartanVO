@@ -37,22 +37,26 @@ Download data and put in folder: `data/SubPipe/chunk3`
 ### Run the testing script
 
 - Testing on Aqualoc-Seq9
-   - TartanVO:
+
 ```
+# TartanVO
 $ python vo_trajectory_from_folder.py --model-name tartanvo_1914.pkl --aqualoc --batch-size 1 --worker-num 1 --test-dir data/Aqualoc/seq9/images_sequence_9_3000 --pose-file data/Aqualoc/seq9/poses_colmap_inverse_3000.txt 
 ```
-      - wflow-TartanVO:
+
 ```
+# wflow-TartanVO
 $ python test_uie.py --model-name tartanvo_1914.pkl --uie-model-name model_best_val_2062.pth.tar --aqualoc --batch-size 1 --worker-num 1 --test-dir data/Aqualoc/seq9/images_sequence_9_3000 --pose-file data/Aqualoc/seq9/poses_colmap_inverse_3000.txt
 ```
 
 - Testing on SubPipe-chunk3
-   - TartanVO
+
 ```
+# TartanVO
 $ python vo_trajectory_from_folder.py --model-name tartanvo_1914.pkl --subpipe --batch-size 1 --worker-num 1 --test-dir data/SubPipe/chunk3/Cam0_images --pose-file data/SubPipe/chunk3/poses.txt
 ```
-      - wflow-TartanVO:
+
 ```
+# wflow-TartanVO
 $ python test_uie_rgb.py --model-name tartanvo_1914.pkl --uie-model-name model_best_val_2062.pth.tar --subpipe --batch-size 1 --worker-num 1 --test-dir data/SubPipe/chunk3/Cam0_images --pose-file data/SubPipe/chunk3/poses.txt
 ```
 

@@ -14,12 +14,6 @@ Our code has been tested on Ubuntu 22.04, and a Cuda version of 11.8
 
 
 ## Testing with a pretrained model
-### Download the pretrained model
-
-```
-$ mkdir models
-$ wget https://cmu.box.com/shared/static/t1a5u4x6dxohl89104dyrsiz42mvq2sz.pkl -O models/tartanvo_1914.pkl
-```
 
 ### Download the testing data
   
